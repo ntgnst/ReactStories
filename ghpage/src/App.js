@@ -4,6 +4,9 @@ import Stories from 'react-insta-stories'
 export default class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      pauseClicked : false
+    }
     this.stories = React.createRef();
     this.col = React.createRef();
   }
@@ -17,9 +20,11 @@ export default class App extends Component {
 
   play = () => {
     this.stories.current.play();
+    this.setState({pauseClicked: false});
   }
   pause = () => {
     this.stories.current.pause();
+    this.setState({pauseClicked: true});
   }
   prev = () => {
     this.stories.current.previous();
@@ -29,7 +34,9 @@ export default class App extends Component {
   }
   handleScroll = () => {
     if (this.col.clientHeight - window.pageYOffset > 0) {
-      this.play();
+      if(!this.state.pauseClicked){
+        this.play();
+      }
     }
     else{
       this.pause();
