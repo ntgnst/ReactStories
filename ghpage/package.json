@@ -1,0 +1,21 @@
+{
+  "name": "react-insta-stories-example",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-insta-stories": "file:..",
+    "react-scripts": "^1.1.4",
+    "react-transition-group": "^2.6.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "debug": "react-scripts --inspect-brk=1453 start",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
