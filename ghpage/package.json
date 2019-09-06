@@ -12,7 +12,7 @@
     "react-transition-group": "^2.6.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --inspect-brk=3000 start",
     "build": "react-scripts build",
     "debug": "react-scripts --inspect-brk=1453 start",
     "test": "react-scripts test --env=jsdom",
